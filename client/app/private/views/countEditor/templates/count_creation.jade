@@ -1,0 +1,38 @@
+.page-header
+  h1 New count
+  p A new count is juste a folder where you can put some friends and
+  | create a fictional history of who paid what and who owe who.
+#formular
+  #input-name-grp.form-group
+    label(for='input-name') Count Name
+    input#input-name.form-control(type='text', placeholder='Name')
+
+  .form-group
+    label(for='input-description') Count Description
+    input#input-description.form-control(type='text', placeholder='Description')
+
+  label(for='currency') Count Currencies
+  #currency.form-group
+    #currencies-list.btn-group(data-toggle='buttons')
+      label.btn.btn-primary.currency
+        <input type="checkbox", autocomplete="off", value="€"> €
+      label.btn.btn-primary.currency
+        <input type="checkbox", autocomplete="off", value="$"> $
+
+
+  .form-group
+    #list-users.btn-group
+
+  label(for='input-user-grp') Count Users
+  #input-user-grp.form-group
+    .input-group
+      form
+        input#input-users.form-control(type='text', placeholder='My name')
+        span.input-group-btn
+          input#add-user.btn.btn-default(type='submit', value='Add user')
+  #name-alert
+
+
+
+  button#submit-editor.btn.btn-default Submit
+

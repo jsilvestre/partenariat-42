@@ -1,0 +1,15 @@
+div.panel.panel-primary
+	.panel-heading #{model.name}
+	.panel-body
+
+		label(for='description') Description
+		#description.form-group
+			p #{model.description}
+
+		label(for='user-list') Users
+		#user-list.form-group
+			each user in model.users
+				button.btn(style="background-color: ##{user.color}") #{user.name}
+
+		.form-group
+			button.archive-see-count.btn.btn-primary.btn-block See
